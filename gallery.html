@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gallery</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="gallery-page">
+
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+      <li><a href="favorites.html">Favorites</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <div class="gallery-controls">
+    <div class="sort">
+        <label for="sort-select">정렬:</label>
+        <select id="sort-select">
+            <option value="date-desc">최신순</option>
+            <option value="date-asc">오래된순</option>
+            <option value="dist-asc">가까운순</option>
+            <option value="dist-desc">먼순</option>
+        </select>
+        <span class="info-icon" title="가까운순/먼순은 청운대학교 인천캠퍼스 기준입니다." onclick="toggleInfo()">ⓘ</span>
+    
+        
+        <div class="info-popup" id="info-popup">
+            가까운순/먼순은 청운대학교 인천캠퍼스 기준입니다.
+        </div>
+    </div>
+    <div class="view-mode">
+        보기방식:
+        <span>썸네일(4열)</span> |
+        <span>썸네일(2열)</span> |
+        <span>텍스트 목록형</span> |
+        <span>갤러리형</span>
+    </div>
+</div>
+
+  
+  <div class="gallery-content">
+    
+    <div class="thumbnail-grid grid-4col active"></div>
+
+    
+    <div class="thumbnail-grid grid-2col"></div>
+
+    
+    <div class="thumbnail-list">
+      <ul></ul>
+    </div>
+  </div> 
+
+  
+  <div class="gallery-view-wrapper">
+    <div class="gallery-view">
+      <div class="gallery-main">
+        <div class="gallery-main-inner">
+          <img id="gallery-main-image" src="..." />
+        </div>
+        <button class="gallery-arrow left">‹</button>
+        <button class="gallery-arrow right">›</button>
+      </div>
+    </div>
+  </div>
+
+  
+  <div class="gallery-thumbnails-wrapper">
+    <div class="gallery-thumbnails"></div>
+  </div>
+
+  <script src="gallery.js"></script>
+</body>
+</html>
